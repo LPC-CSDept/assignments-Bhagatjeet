@@ -26,5 +26,8 @@ int main()
 	cout << "Score2 " << x.score[1] << "\t";
 	cout << "Sum " << x.sum << "\t";
 	cout << "Avg " << x.avg << "\n";
+	
+	// Need more implementation to read all student's information
+	// Make a function to find the Students information
 
 }
