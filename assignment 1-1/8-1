@@ -39,6 +39,5 @@ int binarySearch(int number[], int N, int target)
         else 
             first = mid + 1;
     }
-
 	return -1;
 }
