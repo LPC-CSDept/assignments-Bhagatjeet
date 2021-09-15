@@ -17,6 +17,7 @@ int main()
 				swap (numbers[j], numbers[j+1] );
 
 	printArray(numbers, N);
+  return 0;
 }
 
 void printArray(int a[], int x)
