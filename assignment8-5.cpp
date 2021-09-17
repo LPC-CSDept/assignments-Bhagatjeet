@@ -21,7 +21,7 @@ int main()
 	for(int j=0; j<ID.size()-1; j++)
 		if ( ID[j] > ID[j+1]){
 			swap(ID[j], ID[j+1]);
-			swap(Names[j], Names[j+1]);
+		
 		}
 	}
 	
