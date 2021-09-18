@@ -25,30 +25,26 @@ int main()
 		}
 	}
 	
+  
 	printVector(ID, 5);
 	printVector(Names, 5);
 
-int minval, minid;
-    string change;
+int min, minidx;
+  string changed;
     for(int i=0; i<N; i++)
     {
-        minval = ID[i];
-        minid = i;
-        for(int j=i+1; j<N; j++)
+        for(int z=i; z<N; z++)
         {
-            if ( minval > ID[j] )
+            if ( min > ID[z] )
             {
-                minval = ID[j];
-                minid = j;
+                min = ID[z];
+                minidx = z;
+                min = ID[i];
+			minidx = i;
             }
-        }
-        ID[minid] = ID[i];
-        ID[i] = minval;
-
-        change = Names[minid];
-        Names[minid] = Names[i];
-        Names[i] = change;
+}
     }
+
 }
 
 
