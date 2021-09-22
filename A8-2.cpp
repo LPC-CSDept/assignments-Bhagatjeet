@@ -16,6 +16,7 @@ int main()
 	int array[N];
 	int target;
 	int total_linear = 0;
+int total_binary = 0;
 
 	srand(time(0)); 
 	makeArray(array, N);
@@ -26,6 +27,13 @@ int main()
 		total_linear += linearSearch(array, N, target);
 	}
 	cout << "The average comparison number " << total_linear / TRY << endl;
+
+for(int i=0; i<TRY; i++){
+		target = array[rand() % 64];
+		total_binary += binarySearch(array, N, target);
+	}
+	cout << "The average comparison number " << total_binary / TRY << endl;
+
 }
 
 
