@@ -44,7 +44,8 @@ int min, minidx;
             }
 }
     }
-
+printVector(ID, 5);
+	printVector(Names, 5);
 }
 
 
