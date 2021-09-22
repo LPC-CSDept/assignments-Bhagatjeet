@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <cstring>
 using namespace std;
 
 const int 	MAX_LEN = 20;
@@ -10,11 +11,88 @@ struct Students {
 	double 	scores[NUM_SCORES];
 };
 
+void printStudents(Students [], int);
+void makeStudents(Students [], int);
+void sortStudents(Students [], int );
+int binarySearch(Students [], int , int );
 
 int main()
 {
-	ifstream ifs;
+	const int N = 10;
+	Students s[N];
 
+	makeStudents(s, N); 
+	printStudents(s, N); 
+	sortStudents(s, N);
+	printStudents(s, N); 
+
+	int target = 10007777;
+
+	int result = binarySearch(s, N, target);
+	if ( result)
+	{
+		cout << "The student information \n";
+		cout << result << endl;
+	}
+}
+
+void sortStudents(Students s[], int N)
+{
+	for(int i=0; i<N; i++)
+	{
+		for(int j=0; j<N-1; j++)
+		{
+			if (s[j].sid > s[j+1].sid)	
+				swap(s[j], s[j+1]);
+		}
+	}
+
+}
+void makeStudents(Students s[], int N)
+{
+	ifstream ifs;
 	ifs.open("students.txt");
-	
+
+	if ( ifs.fail()){
+		cout << "File not found\n";
+		exit(0);
+	}
+
+	for(int i=0;i<N;i++)
+	{
+		ifs >> s[i].sid >> s[i].sname;
+		for(int j=0;j<NUM_SCORES; j++)
+			ifs >> s[i].scores[j];
+	}
+}
+void printStudents(Students s[], int N)
+{
+	for(int i=0;i<N;i++)
+	{
+		cout << s[i].sid << "\t" << s[i].sname << "\t";
+		for(int j=0; j<NUM_SCORES; j++)
+			cout <<  s[i].scores[j] << "\t";
+		cout << endl;
+	}
+	cout << "==== End of Record === \n";
+}
+
+int binarySearch(Students array[], int N, int target)
+{
+    int first, last, mid;
+    int cmp = 0;
+
+    first = 0;
+    last = N-1;
+    while ( first <= last) 
+    {
+        mid = (first + last) / 2;
+        if ( array[mid].sid == target)
+            return mid;
+        if ( array[mid].sid > target)
+            last = mid - 1;
+        else 
+            first = mid + 1;
+    }
+    return -1;
 }
