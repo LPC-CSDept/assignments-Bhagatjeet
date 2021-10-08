@@ -43,10 +43,10 @@ void sortStudents(Students s[], int N)
 		for(int j=0; j<N-1; j++)
 		{
 			if (s[j].sid > s[j+1].sid)	
+			// if ( strcmp(s[j].sname, s[j+1].sname) > 0 )	
 				swap(s[j], s[j+1]);
 		}
 	}
-
 }
 void makeStudents(Students s[], int N)
 {
