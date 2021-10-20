@@ -1,40 +1,37 @@
-#include <iostream>
-#include <fstream>
+#include<iostream>
+#include<fstream>
 using namespace std;
-const int NAME =20;
-const int SCORES =3;
-struct student{
+  struct Student
+  {
   int sid;
-  char sname[NAME];
-  double score[SCORES];
-  double size;
+  char sname[20];
+  double score[3];
 };
-
 int main()
 {
-  student *ptr = new student;
-  fstream file;
-  file.open("student.bin");
-  file.read((char *)&(*ptr), sizeof(*ptr));
-  ptr->size = sizeof(*ptr);
-  double sum, average;
-  for(int i=0;i<30;i++)
-  {
-    sum = ptr->score[i] + ptr->score[i+1] + ptr->score[i+2];
-    average = sum/3;
-    for(int j=0;j<10;j++)
-    {
-      if(average > 85)
-      {
-        cout << " the student name is " << ptr->sname << endl;
-        cout << " the student id is " << ptr->sid << endl;
-        cout << " the student first score is " << ptr->score[0] << endl;
-        cout << " the student second score is " << ptr->score[1] << endl;
-        cout << " the student third score is " << ptr->score[2] << endl;
-        cout << endl << endl;
-      }
-      else
-        cout << " the student's average score is below 85, so student info will not be revealed. " << endl;
+  double average;
+struct Student *learn = new struct Student;
+ifstream in("students.bin",ios::binary);
+while(!in.eof())
+{
+in.read((char*)&(*learn), sizeof(*learn));
+average = 0;
+for(int i = 0; i<3; i++)
+average = average+learn->score[i];
+average = average/3;  
+
+if(average>85){
+  cout<< learn -> sid <<" "<<learn -> sname << " " ;
+  for(int i=0; i<3; i++){
+cout<< learn -> score[i] << " " ;
   }
-  }
+  cout<<endl;
+}
+else
+{
+  cout << "the average is below 85, so student info could not be shown." << endl;
+}
+}
+in.close();
+return 0;
 }

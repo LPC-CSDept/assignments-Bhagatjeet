@@ -1,23 +1,28 @@
-#include <iostream>
-#include <fstream>
+#include<iostream>
+#include<fstream>
 using namespace std;
-const int NAME =20;
-const int SCORES =3;
-struct student{
+  struct Student
+  {
   int sid;
-  char sname[NAME];
-  double score[SCORES];
+  char sname[20];
+  double score[3];
 };
 
 int main()
 {
-  student *ptr = new student;
-  fstream file;
-  file.open("student.bin");
-  file >> ptr->sid;
-  file >> ptr->sname;
-  file >> ptr->score[0];
-  file >> ptr->score[1];
-  file >> ptr->score[2];
-  file.write((char *)&(*ptr),sizeof(*ptr));
+struct Student *learn = new struct Student;
+std::ifstream in("students.txt"); 
+std::ofstream out("students.bin", std::ios::binary);
+while(!in.eof()){
+  in>>learn->sid; 
+  in>>learn->sname;
+  for(int i = 0; i<3; i++){
+    in>>learn->score[i];
+  }
+  out.write((char*)&(*learn), sizeof(*learn) );
 }
+
+in.close();
+out.close();
+return 0;
+};
