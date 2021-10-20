@@ -9,7 +9,6 @@ void printArray(int * const ptr, int N);
 
 int main()
 {
-    srand(time(0));
     const int N=10;
     int *ptr=nullptr;
     ptr = fillupArray(N);
@@ -17,6 +16,7 @@ int main()
 }
 int *fillupArray(int N)
 {
+      srand(time(0));
     int *num = new int[N];
     for (int i=0; i<N; i++){
         num[i]=rand()% 100;
