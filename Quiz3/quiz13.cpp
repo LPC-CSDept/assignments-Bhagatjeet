@@ -10,6 +10,7 @@ Numbers::Numbers()
 
 Numbers::Numbers(int setID, int size) 
 {
+  srand(time(0));
   id = setID;
   numbers.reserve(size);
   for(int i=0; i<size; i++) 
@@ -54,3 +55,23 @@ int Numbers::getMax() const
   }
 }
 
+int Numbers::getMin() const 
+{
+  if(numbers.size() == 1) 
+  {
+    return numbers[0];
+  } 
+  else 
+  {
+    int min = numbers[0];
+    for(int i = 0; i < numbers.size() - 1; i++) 
+    {
+      int current = numbers[i];
+      if(current < min) 
+      {
+        min = current;
+      }
+    }
+    return min;
+  }
+}
