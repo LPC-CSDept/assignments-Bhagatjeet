@@ -27,3 +27,4 @@ class NUMBERS
   void addElm(int a) ;
   void printAll( ) const;
 }
+#endif
