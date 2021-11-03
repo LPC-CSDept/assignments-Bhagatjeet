@@ -75,3 +75,46 @@ int Numbers::getMin() const
     return min;
   }
 }
+
+int Numbers::getSum() const 
+{
+    if(numbers.size() == 1) 
+    {
+    return numbers[0];
+  } 
+  else 
+  {
+    int sum = 0;
+    for(int i = 0; i < numbers.size() - 1; i++) 
+    {
+      sum += numbers[i];
+    }
+    return sum;
+  }
+}
+
+void Numbers::deleteElm(int d) 
+{
+  vector<int>::iter it;
+  for(iter = numbers.begin(); it < numbers.end(); it++) 
+  {
+    if(*it == d) 
+    {
+      numbers.erase(it--);
+    }
+  }
+}
+
+void Numbers::addElm(int num) 
+{
+  numbers.push_back(num);
+}
+
+void Numbers::printAll() const 
+{
+    for(int i = 0; i < numbers.size()-1; i++) 
+    {
+      cout << numbers[i] << "\t";
+    } 
+    cout << "\n";
+}
