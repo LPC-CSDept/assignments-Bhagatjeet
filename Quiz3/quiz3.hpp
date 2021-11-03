@@ -1,9 +1,10 @@
 
-#ifndef Number_H
-#define Number_H
+#ifndef Numbers_H
+#define Numbers_H
 #include <iostream>
 #include <vector>
 #include <ctime>
+#include <cstdlib>
 using namespace std;
 
 class NUMBERS
@@ -11,7 +12,11 @@ class NUMBERS
   private:
   int ID;
   vector <int> numbers;
+
   public:
+  Numbers();
+  Numbers(int, int);
+  ~Numbers();
   int getID() const;
   int getSize() const;
   int getElm(int i) const;
