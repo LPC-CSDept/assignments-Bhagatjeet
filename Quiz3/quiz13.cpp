@@ -95,8 +95,8 @@ int Numbers::getSum() const
 
 void Numbers::deleteElm(int d) 
 {
-  vector<int>::iter it;
-  for(iter = numbers.begin(); it < numbers.end(); it++) 
+  vector<int>::iterator it;
+  for(it = numbers.begin(); it < numbers.end(); it++) 
   {
     if(*it == d) 
     {

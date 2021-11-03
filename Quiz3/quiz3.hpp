@@ -7,10 +7,10 @@
 #include <cstdlib>
 using namespace std;
 
-class NUMBERS
+class Numbers
 {
   private:
-  int ID;
+  int id;
   vector <int> numbers;
 
   public:
