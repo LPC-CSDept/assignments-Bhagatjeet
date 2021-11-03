@@ -3,7 +3,7 @@
 #define Number_H
 #include <iostream>
 #include <vector>
-
+#include <ctime>
 using namespace std;
 
 class NUMBERS
