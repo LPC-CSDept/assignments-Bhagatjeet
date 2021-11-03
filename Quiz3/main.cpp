@@ -33,8 +33,8 @@ int findMax(Numbers nums[], int size)
     int highid = -1;
     for(int i = 0; i < size; i++) 
     {
-      int max = nums[i].getMax() - nums[i].getMin();
-      if(max > max) 
+      int fmax = nums[i].getMax() - nums[i].getMin();
+      if(fmax > max) 
       {
         max = max;
         highid = nums[i].getID();

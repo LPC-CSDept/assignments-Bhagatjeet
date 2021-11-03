@@ -26,5 +26,5 @@ class Numbers
   void deleteElm(int d) ;
   void addElm(int a) ;
   void printAll( ) const;
-}
+};
 #endif
