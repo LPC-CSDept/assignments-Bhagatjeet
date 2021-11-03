@@ -19,3 +19,9 @@ int Numbers::getSize() const
   return numbers.size();
 }
 
+int Numbers::getElm(int i) const {
+ 
+    return numbers[i];
+  
+  throw -1;
+}
