@@ -8,6 +8,15 @@ Numbers::Numbers()
   numbers.reserve(0);
 }
 
+Numbers::Numbers(int setID, int size) 
+{
+  id = setID;
+  numbers.reserve(size);
+  for(int i=0; i<size; i++) 
+  {
+    numbers.push_back((rand() % 99));
+  }
+}
 
 int Numbers::getID() const 
 {
@@ -23,3 +32,25 @@ int Numbers::getElm(int i) const {
  
     return numbers[i];
 }
+
+int Numbers::getMax() const 
+{
+  if(numbers.size() == 1) 
+  {
+    return numbers[0];
+  } 
+  else 
+  {
+    int max = numbers[0];
+    for(int i = 0; i < numbers.size() - 1; i++) 
+    {
+      int current = numbers[i];
+      if(current > max) 
+      {
+        max = current;
+      }
+    }
+    return max;
+  }
+}
+
