@@ -1,6 +1,6 @@
 #include <iostream>
 #include "student.cpp"
-#include "class.hpp"
+#include "class.cpp"
 #include <fstream>
 #include <cstring>
 #include <iomanip>
@@ -66,3 +66,30 @@ ifstream &operator>>(ifstream &ifs, Course &c)
 
   int numStudent;
   ifs >> numStudent;
+  vector<Student> students;
+  for(int i = 0; i<numStudent; i++)
+  {
+    int ID;
+    string sname;
+    char grade;
+    double scores;
+    ifs >> ID >> sname >> grade >> scores;
+    Student s = Student(ID, sname, grade, scores);
+    students.push_back(s);
+  }
+  c.setCourse(cname, credits, semester, students);
+}
+ostream &operator<<(ostream &os, Course &c)
+{
+  os << c.getCName() << "\t" << c.getCredits() << "\t" ;
+  os << "StudentID\tcredit\tGrade\tScore\t" << endl;
+
+  for(int i = 0; i<c.getStudent().size(); i++)
+  {
+    os << c.getStudent()[i].getID() << " \t\t ";
+    os << c.getStudent()[i].getSName() << "\t\t";
+    os << c.getStudent()[i].getGrade() << "\t\t";
+    os << c.getStudent()[i].getScores() << "\t\t";
+  }
+  os << " " ;
+}
