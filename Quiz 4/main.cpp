@@ -19,4 +19,16 @@ int main()
   }
   ifs.close();
   ifs.open("student.txt");
-  
+  string courseId;
+  while (ifs >> courseId)
+  {
+    cout << "Course ID: " << courseId << endl;
+    int courseIndex;
+    for(int i = 0; i < Course::getNumCourses(); i++)
+    {
+      if(courses[i].getCName() == courseId)
+      {
+        courseIndex = i;
+      }
+    }
+int numStudent;
