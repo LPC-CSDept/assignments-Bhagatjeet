@@ -28,3 +28,15 @@ int main()
 
     a[i].total_scores = a[i].score1 + a[i].score2 + a[i].score3;
   }
+   a[n].display(a,n);
+  int i = a[10].binarysearch(a, n , 34);
+
+  if(i == -1)
+  {
+    cout << "no such id is present" << endl;
+  }
+  else
+  {
+    cout << "student id: " << a[i].id << "name: " << a[i].name << endl;
+  }
+}
