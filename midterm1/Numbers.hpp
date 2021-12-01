@@ -67,4 +67,3 @@ void printNumbers(Numbers n)
   for(int i = 0; i < n.values.size(); i++)
   cout << n.values[i] << " ";
 }
-#endif
