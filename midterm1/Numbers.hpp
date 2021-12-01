@@ -50,3 +50,21 @@ class Numbers
 
     for(int i = 0; i < n2.values.size(); i++)
          sum2 += n2.values[i];
+if(sum1 > sum2)
+    return true;
+
+    else
+    return false;         
+  }
+};
+
+int Numbers::numOfObjects = 0;
+
+void printNumbers(Numbers n)
+{
+  cout << "\nNumbers are: ";
+
+  for(int i = 0; i < n.values.size(); i++)
+  cout << n.values[i] << " ";
+}
+#endif
