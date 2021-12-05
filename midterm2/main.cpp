@@ -6,37 +6,32 @@ using namespace std;
 
 int main()
 {
-  int n = 10;
-  student a[10];
+  string line;
+  ifstream file("student.txt");
+  if(file.is_open())
+  {
+    while(getline(file,line))
+    {
+      int y = 10;
+  student x[10];
 
-  for(int i = 0; i < n; i++)
+  for(int i = 0; i < y; i++)
   {
     cout << "enter student id: ";
-    cin >> a[i].id;
-
+    cin >> x[i].id;
     cout << "enter student name: ";
-    cin >> a[i].name;
-
+    cin >> x[i].name;
     cout << "enter score 1: ";
-    cin >> a[i].score1;
-
+    cin >> x[i].score1;
     cout << "enter score 2: ";
-    cin >> a[i].score2;
-
+    cin >> x[i].score2;
     cout << "enter score 3: ";
-    cin >> a[i].score3;
-
-    a[i].total_scores = a[i].score1 + a[i].score2 + a[i].score3;
+    cin >> x[i].score3;
+    x[i].total_scores = x[i].score1 + x[i].score2 + x[i].score3;
   }
-   a[n].display(a,n);
-  int i = a[10].binarysearch(a, n , 34);
-
-  if(i == -1)
-  {
-    cout << "no such id is present" << endl;
-  }
-  else
-  {
-    cout << "student id: " << a[i].id << "name: " << a[i].name << endl;
+   x[y].display(x,y);
+  int i = x[10].binarysearch(x, y,34);
+} 
+    file.close();
   }
 }

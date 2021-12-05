@@ -1,5 +1,8 @@
-#include <bits/stdc++.h>
-
+#ifndef STUDENT_H
+#define STUDENT_H
+#include <iostream>
+#include <fstream>
+#include <vector>
 using namespace std;
 
 class student
@@ -11,48 +14,43 @@ class student
   int score2;
   int score3;
   int total_scores;
-void display(student a[], int n)
+void display(student x[], int y)
   {
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < y; i++)
     {
-      int swaps = 0;
-
-      for(int j = 0; j < n-i-1; j++)
+      int s = 0;
+      for(int j = 0; j < y-i-1; j++)
       {
-        if(a[j].total_scores < a[j+1].total_scores)
+        if(x[j].total_scores < x[j+1].total_scores)
         {
-          swap(a[j], a[j+1]);
-          swaps = 1;
+          swap(x[j], x[j+1]);
+          s = 1;
         }
       }
-      if(!swaps)
-      break;
     }
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < y; i++)
     {
-      cout << "student id: " << a[i].id << "name: " << a[i].name<< " total score is: " << a[i].score1 + a[i].score2 + a[i].score3 << endl;
+      cout << "student id: " << x[i].id << "name: " << x[i].name<< " total score is: " << x[i].score1 + x[i].score2 + x[i].score3 << endl;
     }
   }
 
-  int binarysearch(student a[], int n, int id)
+  int binarysearch(student x[], int y, int id)
   {
-    int start = 0;
-    int end = n-1;
-
-    while(start<=end)
+    int first = 0;
+    int last = x-1;
+    while(first<=last)
     {
-      int mid = (start+end)/2;
-
-      if(a[mid].id == id)
+      int mid = (first+last)/2;
+      if(x[mid].id == id)
       {
         return mid;
       }
-      else if(a[mid].id >id)
+      else if(x[mid].id >id)
       {
-        start = mid-1;
+        first = mid-1;
       }
       else{
-        end = mid - 1;
+        last = mid - 1;
       }
     }
     return -1;
