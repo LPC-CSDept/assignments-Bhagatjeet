@@ -13,12 +13,12 @@ class Course
 public:
 course(); // default constructor
   Course(int id, string name, int credit);// parameterized constructor
-int getId() const;// return course id
-  string &getName()const; // return course name
-  int getCredit() const;// return course credit
-  void setId(int id);//set course id
-  void setName(const string &name);//set course name
-  void setCredit(int credit); // set course credit
+int getid() const;// return course id
+  string &getname()const; // return course name
+  int getcredit() const;// return course credit
+  void setid(int id);//set course id
+  void setname(const string &name);//set course name
+  void setcredit(int credit); // set course credit
   void print() const;//display course details
 };
 #endif
