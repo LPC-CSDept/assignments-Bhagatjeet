@@ -10,5 +10,10 @@ class Course
   string name; // store the course name
   int credit; // store the course credit
 
+public:
+course(); // default constructor
+  Course(int id, string name, int credit);// parameterized constructor
 
-}
+  void print() const;//display course details
+
+};
