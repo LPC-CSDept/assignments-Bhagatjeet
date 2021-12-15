@@ -13,7 +13,7 @@ class Course
 public:
   Course(int id, string name, int credit);// parameterized constructor
 int getid() const;// return course id
-  const string &getname()const; // return course name
+ const string &getname()const; // return course name
   int getcredit() const;// return course credit
   void setid(int id);//set course id
   void setname(const string &name);//set course name

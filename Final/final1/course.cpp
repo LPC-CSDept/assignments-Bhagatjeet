@@ -14,7 +14,7 @@ int Course::getid() const
 {
   return id;
 }
-const string &Course::getname() const
+ const string &Course::getname() const
 {
   return name;
 }
@@ -22,4 +22,18 @@ const string &Course::getname() const
 int Course::getcredit() const
 {
   return credit;
+}
+void Course::setid(int id)
+{
+  this->id = id;
+}
+
+void Course::setname(const string &name)
+{
+  this->name = name;
+}
+
+void Course::setcredit(int credit)
+{
+  this->credit = credit;
 }
