@@ -24,9 +24,26 @@ testdata_file >> id;
  testdata_file.close();
 for(int i = 0; i < n; i++){
     for(int j = 0; j < n - i - 1; j++){
-      
+      if(course[j].getid() > course[j+1].getid()){
+        Course a = course[j];
+        course[j] = course[j + 1];
+        course[j + 1] = a;
       }
     }
+    int select;
+while(true)
+{
+    cout << "Enter id to search for course:";
+    cout << "Enter 11 to exit the program";
+    cin >> select;
+    if(select == 11)
+    {
+      break;
+    }
+}
+int b = binary_search(course, n, select);
+int c = recursive_binary_search(course, 0, n - 1, select);
+
 
 }
 
