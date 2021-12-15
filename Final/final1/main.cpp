@@ -42,7 +42,7 @@ else {
  while(true)
  {
     cout << "Enter id to search for course:";
-    cout << "Enter 11 to exit the program";
+    cout << "Enter 11 to exit the program ";
     cin >> select;
     if(select == 11)
     {
