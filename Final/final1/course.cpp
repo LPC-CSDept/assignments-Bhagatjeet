@@ -18,7 +18,6 @@ int Course::getid() const
 {
   return name;
 }
-
 int Course::getcredit() const
 {
   return credit;
@@ -27,13 +26,15 @@ void Course::setid(int id)
 {
   this->id = id;
 }
-
 void Course::setname(const string &name)
 {
   this->name = name;
 }
-
 void Course::setcredit(int credit)
 {
   this->credit = credit;
+}
+void Course::print() const 
+{
+  cout << "Course{id =" << id << ", name = " << name << ", credit = "<< credit << "}" << endl;
 }
