@@ -17,8 +17,16 @@ string name;
 testdata_file >> id;
     testdata_file >> name;
     testdata_file >> credit;
+    Course a(id, name, credit); 
+    course[n] = a;
+    n++;
 }
  testdata_file.close();
+for(int i = 0; i < n; i++){
+    for(int j = 0; j < n - i - 1; j++){
+      
+      }
+    }
 
 }
 
