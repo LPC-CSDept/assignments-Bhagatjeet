@@ -1,4 +1,4 @@
-#define COURSE_H
+#ifndef COURSE_H
 #include <iostream>
 using namespace std;
 
@@ -10,7 +10,8 @@ class Course
   int credit; // store the course credit
 
 public:
-  Course(int id, string name, int credit);// parameterized constructor
+Course(); //default constructor
+ Course:: Course(int id, string name, int credit);// parameterized constructor
 int getid() const;// return course id
  const string &getname()const; // return course name
   int getcredit() const;// return course credit
