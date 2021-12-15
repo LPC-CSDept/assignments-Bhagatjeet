@@ -13,7 +13,10 @@ Course course[10];
 while(!testdata_file.eof() && n < 10)
 {
     int id, credit;
-
+string name;
+testdata_file >> id;
+    testdata_file >> name;
+    testdata_file >> credit;
 }
  testdata_file.close();
 
