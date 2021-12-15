@@ -1,0 +1,3 @@
+I am having trouble getting my code to work
+result is
+Enter id to search for course: Enter 11 to exit the program
