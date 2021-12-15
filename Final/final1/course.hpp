@@ -11,7 +11,7 @@ class Course
 
 public:
 Course(); //default constructor
- Course:: Course(int id, string name, int credit);// parameterized constructor
+Course(int id, string name, int credit);// parameterized constructor
 int getid() const;// return course id
  const string &getname()const; // return course name
   int getcredit() const;// return course credit
