@@ -14,3 +14,12 @@ int Course::getid() const
 {
   return id;
 }
+const string &Course::getname() const
+{
+  return name;
+}
+
+int Course::getcredit() const
+{
+  return credit;
+}
