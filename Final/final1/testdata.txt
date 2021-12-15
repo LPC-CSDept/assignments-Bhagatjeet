@@ -1,4 +1,4 @@
-72 Physics 1
+172 Physics 1
 95 Chemistry 5
 100 Math 3 
 57 Economics 1

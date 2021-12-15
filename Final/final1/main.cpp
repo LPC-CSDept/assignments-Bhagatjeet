@@ -8,6 +8,7 @@ int recursive_binary_search(Course[], int, int, int);
 int main()
 {
  ifstream testdata_file("testdata.txt");
+
  Course course[10];
   int n = 0;
  while(!testdata_file.eof() && n < 10)
@@ -47,7 +48,18 @@ int main()
  }
  int b = binary_search(course, n, select);
  int c = recursive_binary_search(course, 0, n - 1, select);
-
+if(b != -1)
+ {
+   {
+      cout << "Course found " << b << endl;
+      cout << "Result of binary search: ";
+      course[b].print();
+      cout << "Result  recursive binary search: ";
+      course[c].print();
+      cout << endl;
+   }
+ }
+  return 0;
 
 }
 
