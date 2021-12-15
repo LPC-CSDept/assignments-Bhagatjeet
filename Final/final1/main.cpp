@@ -7,22 +7,26 @@ int recursive_binary_search(Course[], int, int, int);
 
 int main()
 {
- ifstream testdata_file("testdata.txt");
-
+  fstream inputFile;
+ inputFile.open("Final/final1/testdata.txt", ios::in);
+if (inputFile.fail()) {
+  cout << "Failed to open the file" << endl;
+}
+else {
  Course course[10];
   int n = 0;
- while(!testdata_file.eof() && n < 10)
+ while(!inputFile.eof() && n < 10)
  {
     int id, credit;
     string name;
-    testdata_file >> id;
-    testdata_file >> name;
-    testdata_file >> credit;
+    inputFile >> id;
+    inputFile >> name;
+    inputFile >> credit;
     Course a(id, name, credit); 
     course[n] = a;
     n++;
  }
- testdata_file.close();
+ inputFile.close();
  for(int i = 0; i < n; i++)
  {
     for(int j = 0; j < n - i - 1; j++)
@@ -59,6 +63,7 @@ if(b != -1)
       cout << endl;
    }
  }
+}
   return 0;
 
 }
