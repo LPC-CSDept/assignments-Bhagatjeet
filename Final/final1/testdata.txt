@@ -1,10 +1,10 @@
 72 Physics 1
-95 Chemistry 33
+95 Chemistry 5
 100 Math 3 
 57 Economics 1
 23 Civics 2
 75 Enlish 1
-90 Engineering 7
-63 History 12
+90 Engineering 5
+63 History 3
 70 Botany 4
 45 Biology 1

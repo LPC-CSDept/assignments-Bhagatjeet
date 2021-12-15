@@ -7,8 +7,18 @@ int recursive_binary_search(Course[], int, int, int);
 
 int main()
 {
- ifstream data_file("testdata.txt");
+ ifstream testdata_file("testdata.txt");
+Course course[10];
+  int n = 0;
+while(!testdata_file.eof() && n < 10)
+{
+    int id, credit;
+
 }
+ testdata_file.close();
+
+}
+
 int binary_search(Course*course, int x, int search_id)
 {
 
