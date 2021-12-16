@@ -48,32 +48,22 @@ int main()
   }
  
     int select;
- while(true)
- {
-    cout << "Enter id to search for course:";
-    cout << "Enter 11 to exit the program ";
-    cin >> select;
-    if(select == 11)
-    {
-      break;
-    }
+cout << "Enter ID for course: ";
+  cin >> select;
  }
- int b = binary_search(course, n, select);
- int c = recursive_binary_search(course, 0, n - 1, select);
-if(b != -1)
- {
-   {
-      cout << "Course found " << b << endl;
-      cout << "Result of binary search: ";
-      course[b].print();
-      cout << "Result  recursive binary search: ";
-      course[c].print();
-      cout << endl;
-   }
- }
+   int size = sizeof(course)/sizeof(course[0]);
 
-inputfile.close();
-  return 0;
+ Course r;
+
+  r = recursiveBinarySearch(select, course, 0, n-1);
+  cout << endl;
+  cout << "Recursive Search Found: " << endl;
+  cout << r
+  cout << endl;
+  r = iterativeBinarySearch(course,size-1,select);
+  cout << endl;
+  cout << "Iterative Search Found: " << endl;
+  cout << r;
 
 }
 
