@@ -1,0 +1,23 @@
+0 9
+0 0
+2 9
+2 6
+2 3
+2 2
+4 3
+5 6
+5 5
+7 6
+8 9
+8 7
+9 9
+23 Civics 2
+45 Biology 1
+57 Economics 1
+63 History 3
+70 Botany 4
+75 English 1
+90 Engineering 5
+95 Chemistry 5
+100 Math 3
+172 Physics 1

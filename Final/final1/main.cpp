@@ -71,14 +71,15 @@ if(b != -1)
       cout << endl;
    }
  }
-}
-inputFile.close();
+
+inputfile.close();
   return 0;
 
 }
 
-int binary_search(Course*course, int x, int search_id)
+int binary_search(Course[], int x, int search_id)
 {
+  Course results;
   int n=10;
 x=0;
   int y = n - 1;
@@ -104,7 +105,7 @@ while(x <= y)
   return -1;
 }
 
-int recursive_binary_search(Course*course, int y, int z, int search_id)
+int recursive_binary_search(Course array[], int y, int z, int search_id)
 {
    while(y <= z)
   {
