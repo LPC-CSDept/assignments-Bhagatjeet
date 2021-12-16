@@ -44,3 +44,26 @@ ostream& operator<<(ostream& y, Course& course)
   y << course.getcredit() << " ";
   return y;
 }
+
+void swap(Course* a, Course* b) 
+{ 
+    
+} 
+
+// partition the array using last element as pivot
+int partition (Course array[], int last, int first) 
+{ 
+    
+} 
+
+void quickSort(Course *array, int last, int first) 
+{ 
+
+} 
+
+void displayArray(Course array[], int size) 
+{ 
+    int i; 
+    for (i=0; i < size; i++) 
+        cout << array[i] << endl; 
+}
