@@ -9,14 +9,6 @@ void displayArray(Course arr[], int size);
 static int x;
 static string Inputfile;
 const int n = 10;
-
-int main()
-{
-  fstream inputfile;
-  Course z[10];
-  
-}
-
 void operator>>(fstream& inputfile, Course& array){
   int id;
   string name;
@@ -43,6 +35,15 @@ ostream& operator<<(ostream& y, Course& course)
   y << course.getname() << " ";
   y << course.getcredit() << " ";
   return y;
+}
+int main()
+{
+  fstream inputfile;
+  Course z[10];
+  for(int i = 0; i < n; i++){
+    inputfile >> z[i];
+    
+  }
 }
 
 void swap(Course* a, Course* b) 
