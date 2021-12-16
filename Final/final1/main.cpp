@@ -2,9 +2,38 @@
 #include <fstream>
 #include "course.cpp"
 using namespace std;
-int binary_search(Course[], int, int);
-int recursive_binary_search(Course[], int, int, int);
+int binary_search(Course array[], int, int);
+int recursive_binary_search(Course array[], int, int, int);
+static int x;
+static string Inputfile;
+const int n = 10;
+void operator>>(fstream& inputfile, Course& array){
+  int id;
+  string name;
+  int credit;
+  
+  inputfile.open(Inputfile, ios :: in);
+ inputfile.seekg(x);
+  inputfile >> id;
+  inputfile >> name;
+  inputfile >> credit;
 
+  array.setid(id);
+  array.setname(name);
+  array.setcredit(credit);
+
+  x = inputfile.tellg();
+  x += 1;
+  inputfile.close();
+}
+
+ostream& operator<<(ostream& y, Course& course)
+{
+  y << course.getid() << " ";
+  y << course.getname() << " ";
+  y << course.getcredit() << " ";
+  return y;
+}
 int main()
 {
   fstream inputFile;
