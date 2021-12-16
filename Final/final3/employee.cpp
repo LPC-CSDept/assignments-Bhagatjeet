@@ -27,3 +27,15 @@ string Employee :: gethired()
 {
   return hiredate;
 }
+void Employee :: setname(string name)
+{
+  name = name;
+}
+void Employee :: setid(int id)
+{
+  number = id;
+}
+void Employee :: sethired(string hired)
+{
+  hiredate = hired;
+}
