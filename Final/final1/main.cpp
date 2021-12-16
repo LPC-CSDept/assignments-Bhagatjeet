@@ -2,8 +2,8 @@
 #include <fstream>
 #include "course.cpp"
 using namespace std;
-int binary_search(Course array[], int, int);
-int recursive_binary_search(Course array[], int, int, int);
+Course binary_search(Course array[], int, int);
+Course recursive_binary_search(Course array[], int, int, int);
 static int x;
 static string Inputfile;
 const int n = 10;
@@ -77,7 +77,7 @@ inputfile.close();
 
 }
 
-int binary_search(Course array[], int x, int search_id)
+Course binary_search(Course array[], int x, int search_id)
 {
   Course results;
 bool w = false;
@@ -100,25 +100,20 @@ while(y <= x && !x)
   return results;
 }
 
-int recursive_binary_search(Course array[], int y, int z, int search_id)
+Course recursive_binary_search(Course array[], int y, int z, int search_id)
 {
-   while(y <= z)
-  {
-    int m = y+(z-y)/2;
+ Course result;
 
-    if(course[m].getid() == search_id)
-    {
-      return m;
-    }
-
-    if(course[m].getid() < search_id)
-    {
-      return recursive_binary_search(course, m + 1, z, search_id);
-    }
-    else
-    {
-      return recursive_binary_search(course, y, m - 1, search_id);
-    }
-  }
-  return -1;
+  if(y > z)
+    return Course();
+  else{
+    int m = (y + z) / 2;
+    if(search_id == array[m].getid())
+      result = array[m];
+    else if (search_id < array[m].getid())
+      result = recursive_binary_search(search_id, array, y, z - 1);
+    else 
+      result = recursive_binary_search(search_id, array, m + 1, z);
+  }  
+  return result;
 }
