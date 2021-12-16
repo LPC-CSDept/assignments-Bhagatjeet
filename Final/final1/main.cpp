@@ -2,6 +2,7 @@
 #include <fstream>
 #include "course.cpp"
 using namespace std;
+
 Course binary_search(Course array[], int, int);
 Course recursive_binary_search(Course array[], int, int, int);
 static int x;
@@ -40,7 +41,7 @@ int main()
  Course course[10];
  
   Inputfile = "Final/final2/textdata.txt";
-  int n = 0;
+  
 
  for(int i = 0; i < n; i++)
   {
@@ -50,15 +51,15 @@ int main()
     int select;
 cout << "Enter ID for course: ";
   cin >> select;
- }
+ 
    int size = sizeof(course)/sizeof(course[0]);
 
  Course r;
 
-  r = recursive_binary_search(select, course, 0, n-1);
+  r = recursive_binary_search(course,select, 0, n-1);
   cout << endl;
   cout << "Found: " << endl;
-  cout << r
+  cout << r;
   cout << endl;
   r = binary_search(course,size-1,select);
   cout << endl;
@@ -101,9 +102,9 @@ Course recursive_binary_search(Course array[], int y, int z, int search_id)
     if(search_id == array[m].getid())
       result = array[m];
     else if (search_id < array[m].getid())
-      result = recursive_binary_search(search_id, array, y, z - 1);
+      result = recursive_binary_search(array, search_id, y, z - 1);
     else 
-      result = recursive_binary_search(search_id, array, m + 1, z);
+      result = recursive_binary_search(array,search_id, m + 1, z);
   }  
   return result;
 }
