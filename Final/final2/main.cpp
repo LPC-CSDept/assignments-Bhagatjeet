@@ -12,7 +12,8 @@ const int n = 10;
 
 int main()
 {
-
+  fstream inputfile;
+  Course z[10];
 }
 
 
@@ -34,4 +35,12 @@ void operator>>(fstream& inputfile, Course& array){
   x = inputfile.tellg();
   x += 1;
   inputfile.close();
+}
+
+ostream& operator<<(ostream& y, Course& course)
+{
+  y << course.getid() << " ";
+  y << course.getname() << " ";
+  y << course.getcredit() << " ";
+  return y;
 }
