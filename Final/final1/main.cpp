@@ -36,37 +36,17 @@ ostream& operator<<(ostream& y, Course& course)
 }
 int main()
 {
-  fstream inputFile;
- inputFile.open("Final/final1/testdata.txt", ios::in);
-if (inputFile.fail()) {
-  cout << "Failed to open the file" << endl;
-}
-else {
+  fstream inputfile;
  Course course[10];
+ 
+  Inputfile = "Final/final2/textdata.txt";
   int n = 0;
- while(!inputFile.eof() && n < 10)
- {
-    int id, credit;
-    string name;
-    inputFile >> id;
-    inputFile >> name;
-    inputFile >> credit;
-    Course a(id, name, credit); 
-    course[n] = a;
-    n++;
- }
+
  for(int i = 0; i < n; i++)
- {
-    for(int j = 0; j < n - i - 1; j++)
-    {
-      if(course[j].getid() > course[j+1].getid())
-      {
-        Course a = course[j];
-        course[j] = course[j + 1];
-        course[j + 1] = a;
-      }
-    }
- }
+  {
+    inputfile >> course[i];
+  }
+ 
     int select;
  while(true)
  {

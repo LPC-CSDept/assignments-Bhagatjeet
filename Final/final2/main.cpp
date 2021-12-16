@@ -40,6 +40,7 @@ int main()
 {
   fstream inputfile;
   Course z[10];
+  Inputfile = "Final/final2/textdata.txt";
   for(int i = 0; i < n; i++)
   {
     inputfile >> z[i];
