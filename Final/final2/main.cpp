@@ -22,8 +22,16 @@ void operator>>(fstream& inputfile, Course& array){
   int credit;
   
   inputfile.open(Inputfile, ios :: in);
+ inputfile.seekg(x);
+  inputfile >> id;
+  inputfile >> name;
+  inputfile >> credit;
 
- 
+  array.setid(id);
+  array.setname(name);
+  array.setcredit(credit);
 
+  x = inputfile.tellg();
+  x += 1;
   inputfile.close();
 }
