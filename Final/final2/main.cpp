@@ -14,8 +14,8 @@ int main()
 {
   fstream inputfile;
   Course z[10];
+  
 }
-
 
 void operator>>(fstream& inputfile, Course& array){
   int id;
@@ -52,10 +52,22 @@ void swap(Course* a, Course* b)
     *b = c; 
 } 
 
-// partition the array using last element as pivot
+// partition array using last element as pivot
 int partition (Course array[], int last, int first) 
 { 
-    
+    int d = last;
+  int pivot = array[first].getid();
+  int i;
+  for(i = last; i < first; i++)
+  {
+      if(array[i].getid() < pivot)
+      {
+          swap(&array[i], &array[d]);
+          d++;
+      }
+  }
+  swap(&array[first], &array[d]);
+  return d;
 } 
 
 void quickSort(Course *array, int last, int first) 
