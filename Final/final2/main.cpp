@@ -40,10 +40,15 @@ int main()
 {
   fstream inputfile;
   Course z[10];
-  for(int i = 0; i < n; i++){
+  for(int i = 0; i < n; i++)
+  {
     inputfile >> z[i];
-    
   }
+  int j = sizeof(z)/sizeof(z[0]);
+
+  quickSort(z, 0, j-1);
+  
+  displayArray(z,j);
 }
 
 void swap(Course* a, Course* b) 
