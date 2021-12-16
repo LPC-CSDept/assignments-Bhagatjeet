@@ -20,3 +20,4 @@ int getid() const;// return course id
   void setcredit(int credit); // set course credit
   void print() const;//display course details
 };
+#endif

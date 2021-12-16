@@ -47,7 +47,9 @@ ostream& operator<<(ostream& y, Course& course)
 
 void swap(Course* a, Course* b) 
 { 
-    
+    Course c = *a; 
+    *a = *b; 
+    *b = c; 
 } 
 
 // partition the array using last element as pivot
@@ -58,7 +60,18 @@ int partition (Course array[], int last, int first)
 
 void quickSort(Course *array, int last, int first) 
 { 
-
+cout << last << " " << first << endl;
+    if (last < first) 
+    { 
+        //partition the array 
+        int pivot = partition(array, last, first); 
+   
+        //sort the sub arrays 
+        quickSort(array, last, pivot - 1);
+         
+        quickSort(array, pivot + 1, first);
+        
+    }
 } 
 
 void displayArray(Course array[], int size) 
