@@ -55,14 +55,14 @@ cout << "Enter ID for course: ";
 
  Course r;
 
-  r = recursiveBinarySearch(select, course, 0, n-1);
+  r = recursive_binary_search(select, course, 0, n-1);
   cout << endl;
-  cout << "Recursive Search Found: " << endl;
+  cout << "Found: " << endl;
   cout << r
   cout << endl;
-  r = iterativeBinarySearch(course,size-1,select);
+  r = binary_search(course,size-1,select);
   cout << endl;
-  cout << "Iterative Search Found: " << endl;
+  cout << "Found: " << endl;
   cout << r;
 
 }
