@@ -47,7 +47,10 @@ int main()
   {
     inputfile >> course[i];
   }
- 
+ for(int i = 0; i < n; i++){
+    
+    cout << course[i].getid() << endl;
+  }
     int select;
 cout << "Enter ID for course: ";
   cin >> select;
