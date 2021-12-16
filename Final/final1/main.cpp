@@ -77,32 +77,27 @@ inputfile.close();
 
 }
 
-int binary_search(Course[], int x, int search_id)
+int binary_search(Course array[], int x, int search_id)
 {
   Course results;
-  int n=10;
-x=0;
-  int y = n - 1;
-while(x <= y)
-  {
-    int m = x+(y-x)/2;
-
-    if(course[m].getid() == search_id)
+bool w = false;
+  int y = 0;
+  int z =0;
+while(y <= x && !x)
+{
+    z = (y + x) / 2;
+    if(search_id > array[z].getid())
+      y = z + 1;
+    else if(search_id < array[z].getid())
+      x = z - 1;
+    else if(search_id == array[z].getid()) 
     {
-      return m;
+      w=true;
+      results = array[z];
     }
-
-    if(course[m].getid() < search_id)
-    {
-      x = m + 1;
-    }
-
-    else
-    {
-      y= m - 1;
-    }
+    
   }
-  return -1;
+  return results;
 }
 
 int recursive_binary_search(Course array[], int y, int z, int search_id)
