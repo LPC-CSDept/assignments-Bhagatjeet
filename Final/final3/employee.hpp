@@ -16,7 +16,6 @@ class Employee{
     void setname(string name);
     void setid(int id);
     void sethired(string hired);
-    friend class product;// friend class
-    
+    friend class product;// friend class  
 };
 #endif
