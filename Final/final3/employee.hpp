@@ -9,6 +9,14 @@ class Employee{
     string hiredate;
   public:
     employee();
+    Employee(string name, int id, string hired);
+    string getname();
+    int getid();
+    string gethired(); 
+    void setname(string name);
+    void setid(int id);
+    void sethired(string hired);
+    friend class product;// friend class
     
 };
 #endif
