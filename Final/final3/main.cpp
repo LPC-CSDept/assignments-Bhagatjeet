@@ -37,7 +37,27 @@ cout << "Paid more: " << endl;
     }
  cout << highest;
 }
-
+void operator>>(fstream& InputFile, Production& array)
+{
+  InputFile.open(inputfile, ios :: in); 
+  int id, shift;
+  string name, date;
+  double pay;
+  InputFile.seekg(a);
+  InputFile >> id;
+  InputFile >> name;
+  InputFile >> date;
+  InputFile >> shift;
+  InputFile >> pay;
+  array.setname(name);
+  array.setid(id);
+  array.sethired(date);
+  array.setshift(shift);
+  array.setpay(pay);
+  InputFile.tellg();
+  a += 1;
+  InputFile.close();
+}
 
 int main()
 {
