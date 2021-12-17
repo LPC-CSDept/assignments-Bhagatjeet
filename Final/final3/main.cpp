@@ -39,7 +39,12 @@ cout << "Paid more: " << endl;
 }
 void operator>>(fstream& InputFile, Production& array)
 {
+<<<<<<< HEAD
   ifstream InpuFile("Final/final3/testdata.txt");
+=======
+  inputfile = "FINAL/final3/testdata.txt"; 
+  InputFile.open(inputfile, ios :: in); 
+>>>>>>> origin/midterm
   int id, shift;
   int n=10;
   string name, date;
