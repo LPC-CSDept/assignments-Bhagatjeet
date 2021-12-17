@@ -3,7 +3,7 @@ using namespace std;
 
 static int a;
 static string inputfile;
-static double max = 0;
+static double maximum = 0;
 ostream& operator<<(ostream& x, Employee& worker)
 {
   return x;
@@ -27,7 +27,16 @@ cout << "Paid more: " << endl;
   x << "Pay: " << work.getpay()<< endl;
   return x;
  }
- 
+ void high(Production *array){
+  Production highest;
+  for(int i = 0; i < 10; i++)
+    if(array[i].getpay() > maximum)
+    {
+      maximum = array[i].getpay();
+      highest = array[i];
+    }
+ cout << highest;
+}
 
 
 int main()
