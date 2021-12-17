@@ -12,6 +12,12 @@ public Employee
     production() : Employee()
     {
     };
-    
+    double getpay();
+    int getshift();
+    void setshift(int shift);
+    void setpay(double money);
+  friend class Employee;  
+  friend ostream& operator<<(ostream& x, Production& worker);
+  friend double operator > (const Production& y, const Production& z); 
 };
 #endif
