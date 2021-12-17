@@ -18,7 +18,7 @@ public Employee
     void setshift(int shift);
     void setpay(double money);
   friend class Employee;  
-  friend ostream& operator<<(ostream& x, Production& worker);
+  friend ostream& operator<<(ostream& x, Production& work);
   friend double operator > (const Production& y, const Production& z); 
 };
 #endif
