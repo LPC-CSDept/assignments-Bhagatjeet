@@ -39,11 +39,12 @@ cout << "Paid more: " << endl;
 }
 void operator>>(fstream& InputFile, Production& array)
 {
-  InputFile.open(inputfile, ios :: in); 
+  ifstream InpuFile("Final/final3/testdata.txt");
   int id, shift;
+  int n=10;
   string name, date;
   double pay;
-  InputFile.seekg(a);
+  while(!InputFile.eof() && n < 10){
   InputFile >> id;
   InputFile >> name;
   InputFile >> date;
@@ -54,12 +55,28 @@ void operator>>(fstream& InputFile, Production& array)
   array.sethired(date);
   array.setshift(shift);
   array.setpay(pay);
-  InputFile.tellg();
-  a += 1;
+  Production a(id, name, date, shift,pay);
+  a++;
   InputFile.close();
+  }
 }
 
 int main()
 {
-  
+  fstream InputFile;
+  Production p[10], result;
+  for(int i = 0; i < 10; i++){
+    InputFile >> p[i]; 
+  }
+  cout <<  "List: " << endl;
+  for(int i = 0; i < 10; i++)
+  {
+    cout << p[i] << endl;  
+  }
+  cout << endl;
+  cout << "Paid most:" << endl;
+  high(p);
+  cout << endl;
+  int find = p[7] > p[4];
+  cout << "Result: " << find;
 }

@@ -14,8 +14,11 @@ void operator>>(fstream& inputfile, Course& array){
   string name;
   int credit;
   
-  inputfile.open(Inputfile, ios :: in);
- inputfile.seekg(x);
+  ifstream testdata_file("Final/final2/testdata.txt");
+
+ Course course[10];
+  int n = 0;
+ while(!testdata_file.eof() && n < 10){
   inputfile >> id;
   inputfile >> name;
   inputfile >> credit;
@@ -23,9 +26,9 @@ void operator>>(fstream& inputfile, Course& array){
   array.setid(id);
   array.setname(name);
   array.setcredit(credit);
-
-  x = inputfile.tellg();
-  x += 1;
+    Course a(id, name, credit); 
+  x ++;
+ }
   inputfile.close();
 }
 

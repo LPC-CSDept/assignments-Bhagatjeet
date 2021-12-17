@@ -8,13 +8,17 @@ Course recursive_binary_search(Course array[], int, int, int);
 static int x;
 static string Inputfile;
 const int n = 10;
-void operator>>(fstream& inputfile, Course& array){
+void operator>>(fstream& inputfile, Course& array)
+{
   int id;
   string name;
   int credit;
   
-  inputfile.open(Inputfile, ios :: in);
- inputfile.seekg(x);
+  ifstream testdata_file("testdata.txt");
+
+ Course course[10];
+  int n = 0;
+ while(!testdata_file.eof() && n < 10){
   inputfile >> id;
   inputfile >> name;
   inputfile >> credit;
@@ -22,9 +26,9 @@ void operator>>(fstream& inputfile, Course& array){
   array.setid(id);
   array.setname(name);
   array.setcredit(credit);
-
-  x = inputfile.tellg();
-  x += 1;
+    Course a(id, name, credit); 
+  x ++;
+ }
   inputfile.close();
 }
 
@@ -40,7 +44,7 @@ int main()
   fstream inputfile;
  Course course[10];
  
-  Inputfile = "Final/final2/textdata.txt";
+  Inputfile = "Final/final1/textdata.txt";
   
 
  for(int i = 0; i < n; i++)

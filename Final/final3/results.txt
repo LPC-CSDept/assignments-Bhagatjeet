@@ -1,0 +1,62 @@
+List:
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+Paid most:
+ID: 3050984880
+Hire Date:
+Shift: 0
+Pay: 6.93003e-310
+
+Paid more:
+ 's Pay: 6.93003e-310
+ 's Pay: 6.93003e-310 If the result is 1, is paid more.
+ If the result is: 0, is not paid more.
+ Result: 0
