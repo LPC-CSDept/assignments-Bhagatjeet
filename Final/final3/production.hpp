@@ -10,7 +10,7 @@ public Employee
     int shift = 0;
     double hourly = 0;
   public:
-    production() : Employee()
+    Production() : Employee()
     {
     };
     double getpay();
