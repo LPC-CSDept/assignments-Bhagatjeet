@@ -8,6 +8,16 @@ ostream& operator<<(ostream& x, Employee& worker)
 {
   return x;
 }
+double operator > (const Production& y, const Production& z)
+ {
+cout << "Paid more: " << endl;
+  cout << y.name << "'s Pay: " << y.hourly << endl;
+  cout << z.name << "'s Pay: " << z.hourly;
+
+  cout << "If the result is: 1, " <<y.name << " is paid more." << endl;
+  cout << "If the result is: 0, " <<y.name << " is not paid more." << endl;
+  return y.hourly > z.hourly;
+ }
  ostream& operator<<(ostream& x, Production& work)
  {
   x << "Name: " << work.getname() << endl;
@@ -17,11 +27,9 @@ ostream& operator<<(ostream& x, Employee& worker)
   x << "Pay: " << work.getpay()<< endl;
   return x;
  }
- double operator > (const Production& y, const Production& z)
- {
-
- }
  
+
+
 int main()
 {
   

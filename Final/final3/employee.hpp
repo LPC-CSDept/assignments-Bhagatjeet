@@ -8,7 +8,7 @@ class Employee{
     int number;
     string hiredate;
   public:
-    employee();
+    Employee();
     Employee(string name, int id, string hired);
     string getname();
     int getid();
